@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\UserController;
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Users;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,4 @@ use App\Http\Controllers\Users;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\TodolistController@showAllData');

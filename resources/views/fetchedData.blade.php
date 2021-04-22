@@ -15,8 +15,10 @@
                     <button type="submit" name="submit">Add Task</button>
                 </form>
             </div>
-            <div class="show">
-                <h3>List</h3> 
+            <div class = "show">
+                <h3>List</h3>
+                <span>x</span>
+                <h3>Task</h3>
             </div>
         </div>
     </body>
