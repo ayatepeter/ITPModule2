@@ -10,15 +10,19 @@
         <div class="main">
             <div class="add">
                 <center><h1>CRUD TO-DO-LIST</h1></center>
-                <form method="POST" action="index.php">
-                    <input type="text" name="task">
-                    <button type="submit" name="submit">Add Task</button>
+                <form action="todo_submit">
+                    <input type="text" name="task" placeholder="Enter task here">
+                    <button type="submit">Add Task</button>
                 </form>
             </div>
             <div class = "show">
                 <h3>List</h3>
-                <span>x</span>
-                <h3>Task</h3>
+                @foreach ($TodoArr as $todo)
+                    <div class="item">
+                        <a href="edit/{{ $todo->id }}">Edit</a> | <a href="delete/{{ $todo->id }}">Delete</a>
+                        <h3>{{ $todo->task }}</h3> 
+                    </div>
+                @endforeach
             </div>
         </div>
     </body>

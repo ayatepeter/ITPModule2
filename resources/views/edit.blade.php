@@ -10,15 +10,11 @@
         <div class="main">
             <div class="add">
                 <center><h1>CRUD TO-DO-LIST</h1></center>
-                <form method="POST" action="index.php">
-                    <input type="text" name="task">
-                    <button type="submit" name="submit">Add Task</button>
+                <form action="../edit_submit/{{ $TodoArr_task->id }}">
+                    <h3>Edit task</h3>
+                    <input type="text" name="task" value="{{ $TodoArr_task->task }}">
+                    <button type="submit">Confirm</button>
                 </form>
-            </div>
-            <div class = "show">
-                <h3>List</h3>
-                <span>x</span>
-                <h3>Task</h3>
             </div>
         </div>
     </body>
